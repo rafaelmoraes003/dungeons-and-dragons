@@ -93,9 +93,8 @@ export default class Character implements Fighter {
   }
 
   public special(enemy: Fighter): void {
-    const Enemy = enemy;
-    Enemy.lifePoints -= this._strength + (this._energy.amount / 2);
-    Enemy.strength -= Enemy.lifePoints;
+    const damage = this._strength + (this._energy.amount / 2) + 10;
+    enemy.receiveDamage(damage);
   }
 }
 
