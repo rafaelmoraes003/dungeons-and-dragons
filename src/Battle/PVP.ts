@@ -17,6 +17,6 @@ export default class PVP extends Battle {
       player1.attack(player2);
       player2.attack(player1);
     }
-    return super.fight();
+    return super.fight(); // 1 = player1 wins, -1 = player2 wins
   }
 }
