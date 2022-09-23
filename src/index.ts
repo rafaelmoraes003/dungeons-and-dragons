@@ -1,13 +1,24 @@
+import { Necromancer, Ranger, Warrior } from './Archetypes';
 import Battle, { PVE, PVP } from './Battle';
 import Character from './Character';
 import Dragon from './Dragon';
 import Monster from './Monster';
+import { Dwarf, Elf, Orc } from './Races';
 
 /// //////////////////////////////////////////
 
-const player1 = new Character('Mario');
-const player2 = new Character('Luigi');
-const player3 = new Character('Toad');
+const elf = new Elf('rafael');
+const necromancer = new Necromancer(elf.name);
+
+const orc = new Orc('yoshi');
+const ranger = new Ranger(orc.name);
+
+const dwarf = new Dwarf('luigi');
+const warrior = new Warrior(dwarf.name);
+
+const player1 = new Character(elf, necromancer);
+const player2 = new Character(orc, ranger);
+const player3 = new Character(dwarf, warrior);
 
 player1.levelUp();
 player1.levelUp();
