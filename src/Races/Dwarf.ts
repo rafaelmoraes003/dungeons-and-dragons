@@ -5,8 +5,8 @@ export default class Dwarf extends Race {
   private static _dwarfCreatedInstances = 0;
   private _maxLifePoints: number;
 
-  constructor(name: string, dexterity: number) {
-    super(name, dexterity);
+  constructor(name: string) {
+    super(name);
     this._maxLifePoints = RacesMaxPoints.Dwarf;
   }
 
