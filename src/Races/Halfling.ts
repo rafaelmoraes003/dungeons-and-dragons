@@ -8,6 +8,7 @@ export default class Halfling extends Race {
   constructor(name: string) {
     super(name);
     this._maxLifePoints = RacesMaxPoints.Halfling;
+    Halfling._halflingCreatedInstances += 1;
   }
 
   get maxLifePoints(): number {
@@ -15,7 +16,6 @@ export default class Halfling extends Race {
   }
 
   public static createdRacesInstances(): number {
-    Halfling._halflingCreatedInstances += 1;
     return Halfling._halflingCreatedInstances;
   }
 }

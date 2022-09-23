@@ -8,6 +8,7 @@ export default class Elf extends Race {
   constructor(name: string) {
     super(name);
     this._maxLifePoints = RacesMaxPoints.Elf;
+    Elf._elfCreatedInstances += 1;
   }
 
   get maxLifePoints(): number {
@@ -15,7 +16,6 @@ export default class Elf extends Race {
   }
 
   public static createdRacesInstances(): number {
-    Elf._elfCreatedInstances += 1;
     return Elf._elfCreatedInstances;
   }
 }
